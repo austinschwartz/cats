@@ -1,0 +1,25 @@
+
+<table>
+  <thead>
+    <tr>
+      <th>photo</th>
+      <th>name</th>
+      <th>age</th>
+      <th>status</th>
+      <th>date updated</th>
+    </tr>
+  </thead>
+  <tbody>
+  <%= for animal <- @pets["animals"] do %>
+  <tr>
+    <td> <a href='<%= animal["url"] %>'>
+      <img src='<%= Enum.at(animal["photos"], 0)["small"] %>'/>
+      </a>
+    </td>
+    <td><%= animal["name"] %></td>
+    <td><%= animal["age"] %></td>
+    <td><%= animal["status"] %></td>
+    <td><%= animal["status_changed_at"] %></td>
+  </tr>
+  </tbody>
+  <% end %>
