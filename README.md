@@ -1,1 +1,4 @@
-# cats
+# Cats
+
+![cats](/cats.png)
+
